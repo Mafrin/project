@@ -1,0 +1,45 @@
+#theroycont
+{
+	width:1345px;
+	height:800px;
+	padding-top:10px;
+	border:1px solid #8B0000;
+	background-color:black;
+}
+#theroy
+{
+	padding-top:10px;
+	padding-bottom:10px;
+	font-size :17px;
+	color:yellow;
+	padding-left:115px;
+	padding-right:15px;
+	
+	/*border-top:1px dashed #694717;*/
+		
+}
+#leftnav
+{
+	float:left;
+	width:100px;
+	height:800px;
+	border-right:1px solid #8B0000;
+	background-image:url('../images/back-03.jpg');
+	
+	
+}
+
+#rightnav
+{
+	float:right;
+	width:50px;
+	height:700px;
+	border-left:1px solid #694717;
+}
+#heading
+{
+	font-size:20px;
+	padding-bottom:5px;
+	padding-top:10px;
+	color:#A52A2A;
+}

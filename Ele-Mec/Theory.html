@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Ele-Mec</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" media="screen" href="css/reset.css">
+<link rel="stylesheet" type="text/css" media="screen" href="css/therory.css">
+<link rel="stylesheet" type="text/css" media="screen" href="css/grid_24.css">
+<link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+<link rel="stylesheet" type="text/css" media="screen" href="css/slider.css">
+<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Holtwood+One+SC' rel='stylesheet' type='text/css'>
+<script src="js/jquery-1.7.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/tms-0.4.1.js"></script>
+<script>
+$(document)
+    .ready(function () {
+    $('.slider')
+        ._TMS({
+        show: 0,
+        pauseOnHover: true,
+        prevBu: '.prev',
+        nextBu: '.next',
+        playBu: false,
+        duration: 10000,
+        preset: 'zoomer',
+        pagination: false,
+        pagNums: false,
+        slideshow: 7000,
+        numStatus: false,
+        banners: false,
+        waitBannerAnimation: false,
+        progressBar: false
+    })
+});
+</script>
+
+</head>
+<body>
+<div class="main">
+  <header>
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+		<li class="current"><a href="Theory.html">Theory</a></li>
+        <li><a href="Procedure.html">Procedure</a></li>
+        <li><a href="pratical/Default.html">Practical</a></li>
+        <li><a href="Video.html">Video</a></li>
+        
+      </ul>
+    </nav>
+    <h1><a href="index.html"><img src="images/ele-mec.png" alt=""></a></h1> 
+    <div class="slogan">  <span> Meter bridge  </span>
+	<span>physics experiment</span></div>
+  </header>
+  <div id="slide">
+    <div class="slider">
+      <ul class="items">
+        <li><img src="images/back-02.jpg" alt="" ></li>
+        <li><img src="images/back-03.jpg" alt=""></li>
+        <li><img src="images/back-04.jpg" alt=""></li>
+        <li><img src="images/back-05.jpg" alt=""></li>
+      </ul>
+    </div>
+    <a href="#" class="prev">&nbsp;</a><a href="#" class="next">&nbsp;</a> </div>
+  <!--==============================content================================-->
+  <div id="theroycont">
+  <div id="leftnav"> </div>
+ <!-- <div id="rightnav"> </div>--> 
+  <div id="theroy"> 
+
+  <div id="heading"> Our Objective </div>
+ How to determine the equivalent resistance of two resistors when connected in series.  <br>
+  
+   <div id="heading">  The Theory  </div>
+   Before we start learning about series circuits, we need to know what electrical circuits are and what are different types of circuits!
+ 
+ <div id="heading" > Electrical Circuit </div>
+ An electric circuit is simply a closed loop through which charges can continuously move. 
+ An electric circuit basically contains a source of electricity, a load resistance, a switch 
+ or a key for turning the circuit on or off at one's convenience.
+The diagrammatic representation of an electric circuit is called the circuit diagram
+
+ <div id="heading" > Types of circuits </div>
+ When two or more resistors are connected such a way that one end of one resistor is connected to the starting end of the other, then the circuit is called a Series Circuit
+<br>
+<img src="images/1.jpg"> 
+<br> <br>
+Similarly, if the starting ends of two resistors are joined to a point and the terminal ends of the two are combined and given connection to a source of electricity,
+those circuits are called Parallel Circuit.
+<br>
+<img src="images/2.jpg"> 
+<br> <br>
+Since the current has only one path to take, the current through a series circuit is the same through each resistor.
+
+<br><br>
+<b>Before calculating the equivalent resistance, let me ask you, "What is resistance?"</b>
+<br><br>
+Voltage can be thought of as the pressure pushing charges along a conductor.
+
+Electrical resistance shows how much energy you need when you move the charges/current through your devices. If you need lots of energy, then the resistance required is also high.
+<br>
+In many materials, the voltage and resistance are connected by Ohm's Law: V= IR
+<br>
+That is,  the property of a conductor to oppose the flow of charges through it is called its resistance.
+
+<br>
+It is measured as resistance, R= V/I
+<br><br>
+All metals are good conductors, so all metal wires have a relatively low resistance.
+
+The longer a piece of wire the higher is its resistance. Double the length means double the resistance. 
+ 
+
+ie.,  
+
+The resistance of a piece of wire also depends on its thickness/cross-sectional area A of the conductor. Double the area means half the resistance.  A thin wire has a higher resistance than the same thick piece.
+
+
+ie., 
+
+Finally, resistance of a piece of wire depends on its temperature also. The higher the temperature the higher is the resistance. 
+
+Calculating the effective resistance/total resistance of series circuits:
+
+The total resistance/effective resistance of the circuit is found by simply adding up the resistance values of the individual resistors. Adding resistors in series always increases the effective resistance.
+
+
+
+
+ie.,  If  Rs  be the resistance of the series combination then,
+
+
+Here, we used Meter Bridge to calculate the effective resistance accurately.
+
+The Meter Bridge is a device for measurement of resistance using the principle of Wheatstone Network.
+
+Let’s do an experiment now ……
+  </div>
+  </div>
+<!--==============================footer=================================-->
+<footer>
+  <div class="container_24">
+    <div class="grid_11 prefix_1">
+      <p><strong>© 2015 Ele-Mec design</strong><br>
+        <a target="_blank" href="http://ele-mec.tumblr.com/">ele-mec.tumblr.com</a></p>
+    </div>
+    <div class="grid_12">
+      <div class="soc-icons"><a href="#"><img src="images/icon-1.png" alt=""></a><a href="#"><img src="images/icon-2.png" alt=""></a><a href="#"><img src="images/icon-3.png" alt=""></a></div>
+    </div>
+  </div>
+  <div class="clear"></div>
+</footer>
+</body>
+</html>

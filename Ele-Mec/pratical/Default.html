@@ -1,0 +1,271 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html >
+<head>
+<!-- new -->
+<link rel="stylesheet" href="/update/jquery-ui.css">
+<link rel="stylesheet" href="/update/jquery-ui.structure.css">
+<link rel="stylesheet" href="/update/jquery-ui.theme.css">
+<script type="text/javascript" src="/update/jquery.js">
+
+</script>
+<!--end new  -->
+<script type="text/javascript">
+var barValue = 50;
+var inputR = 0;
+var l1 = 50;
+var l2 =50;
+var randomS =  Math.floor((Math.random() * 100));
+var gVale = 0.0;
+</script>
+
+    <title> index</title>
+</head>
+<body onload="init()">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+
+    <script type="text/javascript" src="01.js"></script>
+    <script src="02.js" type="text/javascript"></script>
+    <link href="03.css" rel="stylesheet" type="text/css" />
+    <script src="drag.js" type="text/javascript"></script>
+	<script src="line.js" type="text/javascript"></script>
+	<script type="text/javascript">
+
+function adds()
+{
+var nu1=0,nu2=0;
+nu1=parseInt(document.getElementById('num1').value);
+nu2=parseInt(document.getElementById('num2').value);
+if((nu2<=100)&&(nu2>=0))
+{
+var re=nu1*(nu2/(100-nu2));
+
+
+document.getElementById('result').innerHTML=re+"  ohms";
+}
+else
+{
+window.alert("Invalid length \n The length should be between 0 to 100cm");
+}
+}
+
+function finds()
+{
+var nu1=0,nu2=0;
+nu1=parseInt(document.getElementById('len').value);
+nu2=parseInt(document.getElementById('rad').value);
+
+
+var res =re*((22/7)*(nu2)*(nu2))/nul;
+
+
+document.getElementById('result').innerHTML=res+"  ohms";
+
+
+}
+</script>
+
+
+
+
+    <div id="dvSource">
+	<a href="../index.html"> <input type="button" value="Home" > </a>
+        <img alt="" src="images/galvonameter.png" />
+        <img alt="" src="images/battery.png" />
+        <img alt="" src="images/resisencebox.png" />
+        <img alt="" src="images/resience.png" />
+        <img alt="" src="images/switch.png" />
+        <img alt="" src="images/key.png" />
+		<img alt="" src="images/ure.png" />
+		<img alt="" src="images/galvonameter.png" />
+		<img alt="" src="images/battery.png" />
+    </div>
+
+    <div id ="objectbox1">
+
+	<div id="galvonameter">
+      resistance/unknown resistance
+
+    </div>
+	<div id="resisencebox">
+     resistancebox
+
+    </div>
+
+
+	<div id="resience">
+     galvanometer
+
+    </div>
+
+
+	</div>
+	<hr />
+  <!-- <script>
+    $( function() {
+      $( "#slider" ).slider();
+    } );
+  </script> -->
+
+
+	<div id="objectmeterbox">
+
+	 <div id="result1">
+	 <form>
+		<table>
+			<tr>
+				<td>	<label for="num1">RB(resistance box value)om:</label> </td>
+			</tr>
+
+			<tr>
+				<td> <input type="text" id="num1"/> </td>
+			</tr>
+
+		<tr>
+			<td>  <label for="num2">L(balancing length)cm:</label>  </td>
+		</tr>
+
+		<tr>
+			<td> <input type="text" id="num2"/> </td>
+		</tr>
+
+		<tr>
+			<td> <input type="button" id="add" value="find unknown resistance" onclick="adds();"/> </td>
+		</tr>
+
+		<tr>
+			<td bgcolor="red" id="result"> </td>
+		</tr>
+
+		</table>
+		</form>
+		
+	 </div>
+
+
+	<div id="meterbox">
+        <div  class="plceSlide">
+          <div class="">
+                        <h1 style="display: inline-block;">R :</h1><div class="" style="display: inline-block;"><input id = "rVal" type="text" name="" value=""></div>
+          </div>
+          <hr>
+            <h5 style="display: inline-block">A</h5><h5 style="display: inline-block;float: right;">C</h5>
+            <div id="slider" class ="selector" ></div>
+
+            <div class="">
+              <div style="display: inline-block">
+                L1 = <div id="l1" style="display: inline-block;"></div>
+              </div>
+              <div style="display: inline-block;float: right;">
+                L2 = <div id="l2" style="display: inline-block;"></div>
+              </div>
+            </div>
+            <hr>
+            <div class="">
+                <h1 style="display: inline-block;">G :</h1><h1 class="" id="gVal" style="display: inline-block;"></h1>
+            </div>
+
+            <hr>
+            <div class="">
+                          <h1 style="display: inline-block;">S :</h1><div class="" style="display: inline-block;"><h1 id="sVal"></h1></div>
+            </div>
+        </div>
+
+  </div>
+  <script type="text/javascript">
+
+
+   $("#rVal").attr("disabled", "disabled");
+  console.log(randomS);
+  $( "#slider" ).slider({
+      value: barValue,
+
+    });
+    // $("#rVal").text()
+
+
+    // $("#gVal").text("0.0");
+
+    $("#l1").text(barValue);
+    $("#l2").text(100-barValue);
+    $(".ui-slider-handle").text("B");
+
+    $( ".selector" ).on( "slide", function( event, ui ) {
+      //  console.log(ui.value);
+      l1 = ui.value;
+      l2 = 100-ui.value
+        $("#l1").text(ui.value);
+        $("#l2").text(100-ui.value);
+        $("#gVal").text(GvalueUpdate());
+
+        $("#sVal").text(SvalueUpdate());
+    } );
+
+    $("#rVal").on('input', function() {
+
+        $("#gVal").text(GvalueUpdate());
+        $("#sVal").text( SvalueUpdate());
+
+    });
+    function SvalueUpdate(){
+
+      return (inputR*l1)/l2;
+    }
+    function GvalueUpdate(){
+
+        inputR =$("#rVal").val();
+
+        gVale =(((inputR*l1) - (randomS*l2))/((inputR*l1) + (randomS*l2)))*30;
+        return gVale;
+    }
+//     jQuery('#some_text_box').on('input', function() {
+//     // do your stuff
+// });
+
+  </script>
+
+    </div>
+
+	<hr>
+
+	<div id ="objectbox1">
+
+	<div id="switch">
+      battery
+
+    </div>
+
+	<div id="key">
+     switch
+
+
+	</div>
+
+
+
+	</div>
+	<!-- <canvas id="can" width="900" height="1200" style="position:absolute;top:10%;right:10%; left:10%;border:0px solid;"></canvas>
+    <div style="position:absolute;top:12%;left:43%;">Choose Color  <a href="default.html"> <input type="button" value="clear" > </a>
+	</div> -->
+
+    <!-- <div style="position:absolute;top:15%;left:45%;width:10px;height:10px;background:green;" id="green" onclick="color(this)"></div>
+    <div style="position:absolute;top:15%;left:46%;width:10px;height:10px;background:blue;" id="blue" onclick="color(this)"></div>
+    <div style="position:absolute;top:15%;left:47%;width:10px;height:10px;background:red;" id="red" onclick="color(this)"></div>
+    <div style="position:absolute;top:17%;left:45%;width:10px;height:10px;background:yellow;" id="yellow" onclick="color(this)"></div>
+    <div style="position:absolute;top:17%;left:46%;width:10px;height:10px;background:orange;" id="orange" onclick="color(this)"></div>
+    <div style="position:absolute;top:17%;left:47%;width:10px;height:10px;background:black;" id="black" onclick="color(this)"></div> -->
+<style media="screen">
+  .plceSlide{
+    float: right;
+    width:30em;
+
+  }
+
+
+
+
+</style>
+
+
+</body>
+</html>
